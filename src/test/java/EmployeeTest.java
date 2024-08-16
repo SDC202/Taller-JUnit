@@ -20,7 +20,6 @@ public class EmployeeTest {
         int mes = currentDate.getMonthValue();
         Assume.assumeTrue(mes % 2 != 0);
         Employee employee = new Employee(1000, "USD", 0.1f, EmployeeType.Worker);
-        // Suponiendo que el mes es impar, debería agregar el décimo
         float expectedSalary = 1000 + (386.0f / 12 * 2);
         assertEquals(expectedSalary, employee.cs(), 0.01);
     }
